@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { EmployeeCard } from '../components/Cards/EmployeeCard/EmployeeCard'
 import { Navbar } from '../components/Navbar/Navbar'
 import { Page } from '../components/Page/Page'
 import { colors } from '../styles/colors'
@@ -35,51 +36,149 @@ export const About = () => {
         >
           <span>Om Upplands taxklubb</span>
           <span>
-            Upplands Taxklubb bildades 1958 och Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Phasellus ultricies neque nec magna
-            facilisis placerat. Nullam ultricies turpis a turpis condimentum
-            blandit. In eleifend suscipit odio quis pretium. Morbi vulputate
-            risus eu molestie tincidunt. Nam interdum lectus ut euismod tempor.
-            Nunc vel ex ultrices, ullamcorper ligula at, pretium lectus. Cras
-            porttitor nunc consectetur, rutrum dui nec, viverra elit. Quisque
-            convallis laoreet metus non vestibulum. Praesent elementum magna
-            enim, maximus malesuada nisi tempus sit amet. Pellentesque ligula
-            tortor, viverra nec vulputate egestas, accumsan eget nunc.
+            Taxklubben för dig som är verksam i Uppland. Upplands Taxklubb är en
+            av Svenska Taxklubbens 20 lokalklubbar. Vi ordnar utställningar,
+            olika jaktprov samt kurser och utbildningar för taxar och deras
+            ägare. Du som vill aktivera din tax och uppleva glädjen i att
+            utveckla relationen och samarbetet med din hund. Välkommen att bli
+            medlem och delta i någon av alla våra aktiviteter. Medlemskap
+            anmäler du på Svenska Taxklubbens hemsida.
           </span>
-          <span>
-            Suspendisse potenti. Nam placerat consectetur justo quis venenatis.
-            Proin odio erat, finibus eget purus in, feugiat feugiat dui. In hac
-            habitasse platea dictumst. Suspendisse erat elit, volutpat nec
-            commodo eu, aliquam vitae risus. In ultrices consequat augue vel
-            ornare. Suspendisse potenti. Nulla facilisi.
-          </span>
-          <span>
-            Pellentesque nec lorem purus. In eu condimentum ex. Sed enim arcu,
-            commodo sed tempor at, faucibus mollis nibh. Mauris at ornare
-            tortor. Aliquam facilisis tortor vel cursus iaculis. Proin id
-            posuere magna. Suspendisse tincidunt volutpat sagittis. Aenean
-            tincidunt elit in turpis eleifend dictum.
-          </span>
-          <span>
-            Aenean tempor consequat lorem. Aenean mollis urna arcu, quis
-            accumsan mauris suscipit eu. Integer facilisis lacus efficitur,
-            ultricies dui id, lobortis felis. Sed finibus venenatis elit ac
-            ullamcorper. Curabitur in erat eget lorem fringilla sodales. Fusce
-            eget turpis velit. Vestibulum eget dignissim felis. Donec
-            condimentum tellus consectetur lobortis euismod.
-          </span>
-          <span>
-            Ut commodo egestas dui, et lobortis nunc sagittis a. Mauris interdum
-            viverra libero eget lacinia. Donec sit amet cursus massa, id blandit
-            eros. Aenean a imperdiet lorem, id lobortis lacus. Mauris vel
-            molestie massa, nec ullamcorper est. Donec lacinia quam ac urna
-            fringilla, at aliquet turpis interdum. Phasellus condimentum sed
-            nisl consectetur vulputate. Morbi vel gravida mi. Pellentesque quis
-            purus faucibus, cursus risus ut, iaculis felis. Etiam vel nisi in
-            tellus fermentum ornare eu nec dolor. Vivamus scelerisque nec nunc
-            id ornare. Cras scelerisque vestibulum nisl a pharetra. Mauris
-            tempor non ipsum vel ultricies. Integer ac porta libero.
-          </span>
+        </div>
+      </Page>
+      <Page>
+        <div
+          style={{
+            height: '100%',
+            backgroundColor: colors.primaryKey,
+            color: colors.primaryOn,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            borderRadius: borderRadius,
+            padding: '0.5rem',
+          }}
+        >
+          <span>Styrelsen i Upplands Taxklubb</span>
+          <EmployeeCard
+            title="Ordförande"
+            name="Maria Johansson"
+            address="Golvsta 138, 747 91 Alunda"
+            phone="0706 35 21 05"
+            email="gm.johansson1958@gmail.com"
+          />
+          <EmployeeCard
+            title="Vice ordf"
+            name="Torbjörn Ivarsson"
+            address="Sibyllegatan 18 B, 752 29 Uppsala"
+            phone="0760 25 84 85"
+            email="ttobbe.ivar@gmail.com"
+          />
+          <EmployeeCard
+            title="Kassör"
+            name="Göran Sjöblom"
+            address="Pålsmora 136, 747 95 Gimo"
+            phone="0706 73 09 81"
+            email="gran.sjblom@gmail.com"
+          />
+          <EmployeeCard
+            title="Sekreterare"
+            name="Christina Skoghammar"
+            address="Golvsta 160, 747 91 Alunda"
+            phone="0702 76 55 63"
+            email="cskoghammar@gmail.com"
+          />
+          <EmployeeCard
+            title="Marknadsföring/IT-ansvarig"
+            name="Mia D. Gjerdingen"
+            address="Rickeby 185, 741 98 Knutby"
+            phone="0700 67 99 37"
+            email="miia.dahlberg@hotmail.com"
+          />
+
+          <span>Utställningskommittén</span>
+          <EmployeeCard
+            title="Ansv."
+            name="Kicki Lagerblad"
+            phone="0705 22 44 32"
+            email="kicki.lagerblad@hotmail.com"
+          />
+          <EmployeeCard
+            name="Mia D. Gjerdingen"
+            phone="0700 67 99 37"
+            email="miia.dahlberg@hotmail.com"
+          />
+          <EmployeeCard
+            name="Elinore Jansson"
+            address="Rickeby 185, 741 98 Knutby"
+            phone="0730 91 67 47 "
+            email="kenneloffa@hotmail.com"
+          />
+
+          <span>Jaktprovskommittén</span>
+          <EmployeeCard
+            title="Ansv. drev"
+            name="Mårten Sjöblom"
+            phone="0739 23 85 22"
+            email="marten.72@hotmail.com"
+          />
+          <EmployeeCard
+            title="Ansv. gryt"
+            name="Kalle Westerberg"
+            phone="0704 43 12 30"
+            email="info@mortaros.se"
+          />
+          <EmployeeCard
+            title="Ansv. spår"
+            name="Maria Johansson"
+            phone="0706 35 21 05"
+            email="gm.johansson1958@gmail.com"
+          />
+          <EmployeeCard
+            name="Torbjörn Ivarsson"
+            phone="0760 25 84 85"
+            email="ttobbe.ivar@gmail.com"
+          />
+          <EmployeeCard
+            name="Jacob Granberg"
+            phone="0702 76 42 85"
+            email="jacob.granberg@live.se"
+          />
+          <EmployeeCard
+            name="Fredrik Lövberg"
+            phone="0706 36 24 24"
+            email="fredriklovberg@live.se"
+          />
+          <EmployeeCard
+            name="Göran Sjöblom"
+            phone="0706 73 09 81"
+            email="gran.sjblom@gmail.com"
+          />
+
+          <span>Avelsråd</span>
+          <EmployeeCard
+            title="Korthår"
+            name="Maria Johansson"
+            phone="0706 35 21 05"
+            email="gm.johansson1958@gmail.com"
+          />
+          <EmployeeCard
+            title="Strävhår"
+            name="Ing-Marie Jonsson"
+            phone="0708 52 75 92"
+            email="wera.006@hotmail.com"
+          />
+          <EmployeeCard
+            title="Långhår"
+            name="Mia Dahlberg"
+            phone="0700 67 99 37"
+            email="miia.dahlberg@hotmail.com"
+          />
+
+          <span>Valberedning</span>
+          <EmployeeCard name="Christer Larsson" phone="0706 57 49 34" />
+          <EmployeeCard name="Torgny Edin" phone="018-36 60 97" />
+          <EmployeeCard name="Kim Gjerdingen" phone="0768 00 61 51" />
         </div>
       </Page>
     </div>

@@ -33,53 +33,7 @@ export const Register = () => {
             padding: '0.5rem',
           }}
         >
-          <span>Om Upplands taxklubb</span>
-          <span>
-            Upplands Taxklubb bildades 1958 och Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Phasellus ultricies neque nec magna
-            facilisis placerat. Nullam ultricies turpis a turpis condimentum
-            blandit. In eleifend suscipit odio quis pretium. Morbi vulputate
-            risus eu molestie tincidunt. Nam interdum lectus ut euismod tempor.
-            Nunc vel ex ultrices, ullamcorper ligula at, pretium lectus. Cras
-            porttitor nunc consectetur, rutrum dui nec, viverra elit. Quisque
-            convallis laoreet metus non vestibulum. Praesent elementum magna
-            enim, maximus malesuada nisi tempus sit amet. Pellentesque ligula
-            tortor, viverra nec vulputate egestas, accumsan eget nunc.
-          </span>
-          <span>
-            Suspendisse potenti. Nam placerat consectetur justo quis venenatis.
-            Proin odio erat, finibus eget purus in, feugiat feugiat dui. In hac
-            habitasse platea dictumst. Suspendisse erat elit, volutpat nec
-            commodo eu, aliquam vitae risus. In ultrices consequat augue vel
-            ornare. Suspendisse potenti. Nulla facilisi.
-          </span>
-          <span>
-            Pellentesque nec lorem purus. In eu condimentum ex. Sed enim arcu,
-            commodo sed tempor at, faucibus mollis nibh. Mauris at ornare
-            tortor. Aliquam facilisis tortor vel cursus iaculis. Proin id
-            posuere magna. Suspendisse tincidunt volutpat sagittis. Aenean
-            tincidunt elit in turpis eleifend dictum.
-          </span>
-          <span>
-            Aenean tempor consequat lorem. Aenean mollis urna arcu, quis
-            accumsan mauris suscipit eu. Integer facilisis lacus efficitur,
-            ultricies dui id, lobortis felis. Sed finibus venenatis elit ac
-            ullamcorper. Curabitur in erat eget lorem fringilla sodales. Fusce
-            eget turpis velit. Vestibulum eget dignissim felis. Donec
-            condimentum tellus consectetur lobortis euismod.
-          </span>
-          <span>
-            Ut commodo egestas dui, et lobortis nunc sagittis a. Mauris interdum
-            viverra libero eget lacinia. Donec sit amet cursus massa, id blandit
-            eros. Aenean a imperdiet lorem, id lobortis lacus. Mauris vel
-            molestie massa, nec ullamcorper est. Donec lacinia quam ac urna
-            fringilla, at aliquet turpis interdum. Phasellus condimentum sed
-            nisl consectetur vulputate. Morbi vel gravida mi. Pellentesque quis
-            purus faucibus, cursus risus ut, iaculis felis. Etiam vel nisi in
-            tellus fermentum ornare eu nec dolor. Vivamus scelerisque nec nunc
-            id ornare. Cras scelerisque vestibulum nisl a pharetra. Mauris
-            tempor non ipsum vel ultricies. Integer ac porta libero.
-          </span>
+          <span>Här tar vi emot anmälningar till tävlingarna</span>
         </div>
       </Page>
     </div>

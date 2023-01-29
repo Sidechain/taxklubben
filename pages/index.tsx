@@ -1,11 +1,28 @@
 import Head from 'next/head'
-import { DogCard } from '../components/DogCard/DogCard'
+import { useEffect, useState } from 'react'
 import { Navbar } from '../components/Navbar/Navbar'
-import { NewsCard } from '../components/NewsCard/NewsCard'
+import { NewsCard } from '../components/Cards/NewsCard/NewsCard'
 import { Page } from '../components/Page/Page'
 import { colors } from '../styles/colors'
 
+const contentful = require('contentful')
+
+const client = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE,
+  environment: process.env.CONTENTFUL_ENVIRONMENT,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+})
+
 export default function Home() {
+  const [news, setNews] = useState<any[]>([])
+
+  useEffect(() => {
+    client
+      .getEntries()
+      .then((response: any) => setNews(response.items))
+      .catch(console.error)
+  }, [])
+
   return (
     <div
       style={{
@@ -22,16 +39,22 @@ export default function Home() {
       </Head>
       <Navbar />
       <Page>
-        <NewsCard
-          header="Tävling 23 januari"
-          text="Nu anordnar vi tävling i finast hund ute i Börje. Anmälan gör du på knappen nedan"
-          onClick={() => window.alert('Du är anmäld!')}
-          buttonLabel="Anmäl dig här!"
-        />
-        <NewsCard
-          header="Ny webbsida!"
-          text="Äntligen är nya webben uppe! Nu kommer den fungera mycket bättre på framförallt små skärmar, men även en stor datorskärm!"
-        />
+        <>
+          {news &&
+            news.map((item) => {
+              return (
+                <NewsCard
+                  key={item.fields.header}
+                  header={item.fields.header}
+                  text={item.fields.text}
+                  buttonLabel={item.fields.buttonLabel}
+                  onClick={() => null}
+                  image={'https:' + item.fields.image.fields.file.url}
+                />
+              )
+            })}
+          {news !== null && console.log(news)}
+        </>
       </Page>
       <footer></footer>
     </div>

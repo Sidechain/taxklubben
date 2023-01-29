@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { colors } from '../../styles/colors'
-import { fontSizes } from '../../styles/typography'
-import { screenSizes } from '../../styles/constants'
+import { screenSizes } from '../../../styles/constants'
+import { colors } from '../../../styles/colors'
 
 export const Container = styled(motion.div)`
   height: 200px;
   background-color: ${colors.primaryKey};
-  color: white;
+  color: ${colors.primaryOn};
   border-radius: 8px;
   padding: 8px;
   display: flex;
@@ -20,39 +19,22 @@ export const Container = styled(motion.div)`
   }
 
   @media (min-width: ${screenSizes.tablet}) {
-    width: 30rem;
+    width: 20rem;
   }
 `
 
 export const ImageContainer = styled(motion.div)`
-  height: 100px;
-  width: 100px;
+  height: 6rem;
+  width: 6rem;
   background-color: ${colors.primaryOn};
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  border: solid;
   display: flex;
+  position: relative;
 `
 
 export const TextContainer = styled.div`
   display: flex;
-  width: 100%;
   flex-direction: column;
   padding: 0 8px;
-  flex: min-content;
-`
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  align-self: flex-end;
-  margin-top: auto;
-`
-
-export const Divider = styled.div`
-  height: 3px;
-  width: 100%;
-  background: white;
-  margin: 0.5rem 0;
-`
-
-export const HeaderText = styled.span`
-  font-size: ${fontSizes.subHeader};
 `

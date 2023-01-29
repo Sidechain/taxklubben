@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import { DogCard } from '../components/DogCard/DogCard'
+import { DogCard } from '../components/Cards/DogCard/DogCard'
 import { Navbar } from '../components/Navbar/Navbar'
-import { NewsCard } from '../components/NewsCard/NewsCard'
+import { NewsCard } from '../components/Cards/NewsCard/NewsCard'
 import { Page } from '../components/Page/Page'
 import { colors } from '../styles/colors'
 
-export default function Home() {
+export default function Dogs() {
   return (
     <div
       style={{

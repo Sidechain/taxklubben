@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import { borderRadius } from '../../styles/constants'
+import { borderRadius } from '../../../styles/constants'
 import * as S from './styled'
 
 type Props = {
