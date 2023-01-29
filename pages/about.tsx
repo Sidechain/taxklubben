@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import { EmployeeCard } from '../components/Cards/EmployeeCard/EmployeeCard'
+import { Content } from '../components/common/Content/Content'
+import { ContentHeader } from '../components/common/ContentHeader/ContentHeader'
 import { Navbar } from '../components/Navbar/Navbar'
 import { Page } from '../components/Page/Page'
 import { colors } from '../styles/colors'
@@ -32,6 +34,7 @@ export const About = () => {
             gap: '1rem',
             borderRadius: borderRadius,
             padding: '0.5rem',
+            width: '100%',
           }}
         >
           <span>Om Upplands taxklubb</span>
@@ -57,128 +60,139 @@ export const About = () => {
             gap: '1rem',
             borderRadius: borderRadius,
             padding: '0.5rem',
+            width: '100%',
           }}
         >
-          <span>Styrelsen i Upplands Taxklubb</span>
-          <EmployeeCard
-            title="Ordförande"
-            name="Maria Johansson"
-            address="Golvsta 138, 747 91 Alunda"
-            phone="0706 35 21 05"
-            email="gm.johansson1958@gmail.com"
-          />
-          <EmployeeCard
-            title="Vice ordf"
-            name="Torbjörn Ivarsson"
-            address="Sibyllegatan 18 B, 752 29 Uppsala"
-            phone="0760 25 84 85"
-            email="ttobbe.ivar@gmail.com"
-          />
-          <EmployeeCard
-            title="Kassör"
-            name="Göran Sjöblom"
-            address="Pålsmora 136, 747 95 Gimo"
-            phone="0706 73 09 81"
-            email="gran.sjblom@gmail.com"
-          />
-          <EmployeeCard
-            title="Sekreterare"
-            name="Christina Skoghammar"
-            address="Golvsta 160, 747 91 Alunda"
-            phone="0702 76 55 63"
-            email="cskoghammar@gmail.com"
-          />
-          <EmployeeCard
-            title="Marknadsföring/IT-ansvarig"
-            name="Mia D. Gjerdingen"
-            address="Rickeby 185, 741 98 Knutby"
-            phone="0700 67 99 37"
-            email="miia.dahlberg@hotmail.com"
-          />
+          <ContentHeader text="Styrelsen i Upplands Taxklubb" />
+          <Content>
+            <EmployeeCard
+              title="Ordförande"
+              name="Maria Johansson"
+              address="Golvsta 138, 747 91 Alunda"
+              phone="0706 35 21 05"
+              email="gm.johansson1958@gmail.com"
+            />
+            <EmployeeCard
+              title="Vice ordf"
+              name="Torbjörn Ivarsson"
+              address="Sibyllegatan 18 B, 752 29 Uppsala"
+              phone="0760 25 84 85"
+              email="ttobbe.ivar@gmail.com"
+            />
+            <EmployeeCard
+              title="Kassör"
+              name="Göran Sjöblom"
+              address="Pålsmora 136, 747 95 Gimo"
+              phone="0706 73 09 81"
+              email="gran.sjblom@gmail.com"
+            />
+            <EmployeeCard
+              title="Sekreterare"
+              name="Christina Skoghammar"
+              address="Golvsta 160, 747 91 Alunda"
+              phone="0702 76 55 63"
+              email="cskoghammar@gmail.com"
+            />
+            <EmployeeCard
+              title="Marknadsföring/IT-ansvarig"
+              name="Mia D. Gjerdingen"
+              address="Rickeby 185, 741 98 Knutby"
+              phone="0700 67 99 37"
+              email="miia.dahlberg@hotmail.com"
+            />
+          </Content>
 
-          <span>Utställningskommittén</span>
-          <EmployeeCard
-            title="Ansv."
-            name="Kicki Lagerblad"
-            phone="0705 22 44 32"
-            email="kicki.lagerblad@hotmail.com"
-          />
-          <EmployeeCard
-            name="Mia D. Gjerdingen"
-            phone="0700 67 99 37"
-            email="miia.dahlberg@hotmail.com"
-          />
-          <EmployeeCard
-            name="Elinore Jansson"
-            address="Rickeby 185, 741 98 Knutby"
-            phone="0730 91 67 47 "
-            email="kenneloffa@hotmail.com"
-          />
+          <ContentHeader text="Utställningskommittén" />
+          <Content>
+            <EmployeeCard
+              title="Ansv."
+              name="Kicki Lagerblad"
+              phone="0705 22 44 32"
+              email="kicki.lagerblad@hotmail.com"
+            />
+            <EmployeeCard
+              name="Mia D. Gjerdingen"
+              phone="0700 67 99 37"
+              email="miia.dahlberg@hotmail.com"
+            />
+            <EmployeeCard
+              name="Elinore Jansson"
+              address="Rickeby 185, 741 98 Knutby"
+              phone="0730 91 67 47 "
+              email="kenneloffa@hotmail.com"
+            />
+          </Content>
 
-          <span>Jaktprovskommittén</span>
-          <EmployeeCard
-            title="Ansv. drev"
-            name="Mårten Sjöblom"
-            phone="0739 23 85 22"
-            email="marten.72@hotmail.com"
-          />
-          <EmployeeCard
-            title="Ansv. gryt"
-            name="Kalle Westerberg"
-            phone="0704 43 12 30"
-            email="info@mortaros.se"
-          />
-          <EmployeeCard
-            title="Ansv. spår"
-            name="Maria Johansson"
-            phone="0706 35 21 05"
-            email="gm.johansson1958@gmail.com"
-          />
-          <EmployeeCard
-            name="Torbjörn Ivarsson"
-            phone="0760 25 84 85"
-            email="ttobbe.ivar@gmail.com"
-          />
-          <EmployeeCard
-            name="Jacob Granberg"
-            phone="0702 76 42 85"
-            email="jacob.granberg@live.se"
-          />
-          <EmployeeCard
-            name="Fredrik Lövberg"
-            phone="0706 36 24 24"
-            email="fredriklovberg@live.se"
-          />
-          <EmployeeCard
-            name="Göran Sjöblom"
-            phone="0706 73 09 81"
-            email="gran.sjblom@gmail.com"
-          />
+          <ContentHeader text="Jaktprovskommittén" />
+          <Content>
+            <EmployeeCard
+              title="Ansv. drev"
+              name="Mårten Sjöblom"
+              phone="0739 23 85 22"
+              email="marten.72@hotmail.com"
+            />
+            <EmployeeCard
+              title="Ansv. gryt"
+              name="Kalle Westerberg"
+              phone="0704 43 12 30"
+              email="info@mortaros.se"
+            />
+            <EmployeeCard
+              title="Ansv. spår"
+              name="Maria Johansson"
+              phone="0706 35 21 05"
+              email="gm.johansson1958@gmail.com"
+            />
+            <EmployeeCard
+              name="Torbjörn Ivarsson"
+              phone="0760 25 84 85"
+              email="ttobbe.ivar@gmail.com"
+            />
+            <EmployeeCard
+              name="Jacob Granberg"
+              phone="0702 76 42 85"
+              email="jacob.granberg@live.se"
+            />
+            <EmployeeCard
+              name="Fredrik Lövberg"
+              phone="0706 36 24 24"
+              email="fredriklovberg@live.se"
+            />
+            <EmployeeCard
+              name="Göran Sjöblom"
+              phone="0706 73 09 81"
+              email="gran.sjblom@gmail.com"
+            />
+          </Content>
 
-          <span>Avelsråd</span>
-          <EmployeeCard
-            title="Korthår"
-            name="Maria Johansson"
-            phone="0706 35 21 05"
-            email="gm.johansson1958@gmail.com"
-          />
-          <EmployeeCard
-            title="Strävhår"
-            name="Ing-Marie Jonsson"
-            phone="0708 52 75 92"
-            email="wera.006@hotmail.com"
-          />
-          <EmployeeCard
-            title="Långhår"
-            name="Mia Dahlberg"
-            phone="0700 67 99 37"
-            email="miia.dahlberg@hotmail.com"
-          />
+          <ContentHeader text="Avelsråd" />
+          <Content>
+            <EmployeeCard
+              title="Korthår"
+              name="Maria Johansson"
+              phone="0706 35 21 05"
+              email="gm.johansson1958@gmail.com"
+            />
+            <EmployeeCard
+              title="Strävhår"
+              name="Ing-Marie Jonsson"
+              phone="0708 52 75 92"
+              email="wera.006@hotmail.com"
+            />
+            <EmployeeCard
+              title="Långhår"
+              name="Mia Dahlberg"
+              phone="0700 67 99 37"
+              email="miia.dahlberg@hotmail.com"
+            />
+          </Content>
 
-          <span>Valberedning</span>
-          <EmployeeCard name="Christer Larsson" phone="0706 57 49 34" />
-          <EmployeeCard name="Torgny Edin" phone="018-36 60 97" />
-          <EmployeeCard name="Kim Gjerdingen" phone="0768 00 61 51" />
+          <ContentHeader text="Valberedning" />
+          <Content>
+            <EmployeeCard name="Christer Larsson" phone="0706 57 49 34" />
+            <EmployeeCard name="Torgny Edin" phone="018-36 60 97" />
+            <EmployeeCard name="Kim Gjerdingen" phone="0768 00 61 51" />
+          </Content>
         </div>
       </Page>
     </div>
