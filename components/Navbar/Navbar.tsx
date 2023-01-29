@@ -25,7 +25,6 @@ export const Navbar: FC = () => {
           <StyledLink href="/" label="Hem" />
           <StyledLink href="/register" label="Anmälan" />
           <StyledLink href="/about" label="Om klubben" />
-          {/* <StyledLink href="/dogs" label="Våra hundar" /> */}
           <StyledLink href="/breeders" label="Uppfödare" />
         </S.LinksWrapper>
       </S.LinksContainer>

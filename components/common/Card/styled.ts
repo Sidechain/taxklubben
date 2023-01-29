@@ -10,6 +10,5 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   border-radius: ${borderRadius};
-  padding: 0.5rem;
-  width: 100%;
+  padding: 1rem;
 `
