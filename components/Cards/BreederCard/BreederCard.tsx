@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import React, { FC } from 'react'
-import { borderRadius } from '../../../styles/constants'
 import { Icon } from '../../common/Icon/Icon'
 import * as S from './styled'
 
@@ -37,13 +35,41 @@ export const BreederCard: FC<Props> = ({
         <span>{type}</span>
       </S.TextContainer>
       <S.IconContainer>
-        {email && <Icon type="email" />}
-        {email2 && <Icon type="email" />}
+        {email && (
+          <a href={`mailto: ${email}`}>
+            <Icon type="email" />
+          </a>
+        )}
+        {email2 && (
+          <a href={`mailto: ${email2}`}>
+            <Icon type="email" />
+          </a>
+        )}
         {address && <Icon type="address" />}
-        {phone && <Icon type="phone" />}
-        {phone2 && <Icon type="phone" />}
-        {url && <Icon type="url" />}
-        {instagram && <Icon type="instagram" />}
+        {phone && (
+          <a href={`tel: ${phone}`}>
+            <Icon type="phone" />
+          </a>
+        )}
+        {phone2 && (
+          <a href={`tel: ${phone2}`} target="_blank" rel="noopener noreferrer">
+            <Icon type="phone" />
+          </a>
+        )}
+        {url && (
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <Icon type="url" />
+          </a>
+        )}
+        {instagram && (
+          <a
+            href={`https://www.instagram.com/${instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon type="instagram" />
+          </a>
+        )}
       </S.IconContainer>
     </S.Container>
   )

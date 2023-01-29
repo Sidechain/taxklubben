@@ -22,7 +22,7 @@ export default function Breeders() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Page wrap>
+      <Page>
         <BreederCard
           breederName="Trollkraft's Kennel"
           contact="Maria Johansson"
