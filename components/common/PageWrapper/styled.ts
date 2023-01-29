@@ -2,11 +2,8 @@ import styled from 'styled-components'
 import { colors } from '../../../styles/colors'
 
 export const Container = styled.div`
-  color: ${colors.primaryOnContainer};
+  background-color: ${colors.background};
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1rem;
+  flex-direction: column;
 `

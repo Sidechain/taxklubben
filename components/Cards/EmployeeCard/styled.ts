@@ -12,6 +12,7 @@ export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   transition: all 0.2s;
+  width: 20rem;
 
   /* &:hover {
     background-color: ${colors.primaryContainer};
