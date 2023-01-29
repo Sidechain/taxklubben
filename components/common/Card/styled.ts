@@ -11,4 +11,9 @@ export const Container = styled.div`
   gap: 1rem;
   border-radius: ${borderRadius};
   padding: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+  &:hover {
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.75);
+  }
 `

@@ -9,15 +9,12 @@ export const Container = styled.div`
   justify-content: center;
   width: fit-content;
   padding: 0.5rem;
-  box-shadow: unset;
-  /* border: solid;
-  border-color: ${colors.outline}; */
-  transition: box-shadow 0.3s;
-  box-shadow: 4px 4px 8px ${colors.primaryOnContainer};
+  transition: all 0.2s;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+  &:hover {
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.75);
+  }
   cursor: pointer;
-  /* &:hover {
-    box-shadow: 1px 1px 1px ${colors.primaryOnContainer};
-  } */
 `
 
 export const Label = styled.span``

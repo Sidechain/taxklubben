@@ -13,11 +13,11 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   transition: all 0.2s;
   width: 20rem;
-
-  /* &:hover {
-    background-color: ${colors.primaryContainer};
-    color: ${colors.primaryOnContainer};
-  } */
+  transition: all 0.2s;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+  &:hover {
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.75);
+  }
 
   @media (min-width: ${screenSizes.tablet}) {
     width: 20rem;

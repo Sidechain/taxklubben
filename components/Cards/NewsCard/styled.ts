@@ -9,14 +9,14 @@ export const Container = styled(motion.div)`
   background-color: ${colors.primaryKey};
   color: white;
   border-radius: 8px;
-  padding: 8px;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   transition: all 0.2s;
-
+  gap: 1rem;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
   &:hover {
-    background-color: ${colors.primaryContainer};
-    color: ${colors.primaryOnContainer};
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.75);
   }
 
   @media (min-width: ${screenSizes.tablet}) {
@@ -37,7 +37,6 @@ export const TextContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 0 8px;
   flex: min-content;
 `
 
