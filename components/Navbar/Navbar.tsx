@@ -1,19 +1,17 @@
-import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { FC } from 'react'
-import { StyledLink } from '../common/Link/StyledLink'
+import { Link } from '../common/Link/Link'
 import * as S from './styled'
 
 export const Navbar: FC = () => {
   return (
     <>
-      <S.Container>
+      <S.Container href="/">
         <Image
           src="/images/logo.png"
           alt="Upplands Taxklubb logo"
-          height={80}
-          width={80}
+          height={120}
+          width={120}
           style={{
             objectFit: 'cover',
             overflow: 'hidden',
@@ -22,10 +20,10 @@ export const Navbar: FC = () => {
       </S.Container>
       <S.LinksContainer>
         <S.LinksWrapper>
-          <StyledLink href="/" label="Hem" />
-          <StyledLink href="/register" label="Anmälan" />
-          <StyledLink href="/about" label="Om klubben" />
-          <StyledLink href="/breeders" label="Uppfödare" />
+          <Link href="/" label="Hem" />
+          <Link href="/register" label="Anmälan" />
+          <Link href="/about" label="Om klubben" />
+          <Link href="/breeders" label="Uppfödare" />
         </S.LinksWrapper>
       </S.LinksContainer>
     </>

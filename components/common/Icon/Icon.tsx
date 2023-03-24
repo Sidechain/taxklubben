@@ -22,8 +22,6 @@ const iconPaths = {
   url,
 }
 
-// https://www.google.com/maps/place/Golvsta+138,+747+91+Alunda
-
 export const Icon: FC<Props> = ({ type }) => {
   return <S.Icon src={iconPaths[type]} alt="icon" width={24} height={24} />
 }

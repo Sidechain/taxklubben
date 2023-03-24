@@ -10,10 +10,6 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   border-radius: ${borderRadius};
-  padding: 1rem;
-  transition: all 0.2s;
+  padding: 0.5rem;
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
-  /* &:hover {
-    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.75);
-  } */
 `

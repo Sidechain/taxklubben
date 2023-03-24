@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { colors } from '../../styles/colors'
+import Link from 'next/link'
 
-export const Container = styled(motion.div)`
-  height: 4rem;
+export const Container = styled(motion(Link))`
+  height: 6rem;
   background-color: ${colors.primaryKey};
   color: ${colors.background};
   border-radius: 0 0 8px 8px;

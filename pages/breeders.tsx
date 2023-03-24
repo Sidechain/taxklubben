@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { DogCard } from '../components/Cards/DogCard/DogCard'
 import { Page } from '../components/Page/Page'
 import { BreederCard } from '../components/Cards/BreederCard/BreederCard'
 import { PageWrapper } from '../components/common/PageWrapper/PageWrapper'

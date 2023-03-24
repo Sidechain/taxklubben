@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import * as S from './styled'
 
 type Props = {

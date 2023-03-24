@@ -17,8 +17,5 @@ export const colors = {
   surfaceOn: '#1a1c19',
   outline: '#73796e',
 
-  // yellowLight: '#ffff5a',
-  // yellowDark: '#c7cc00',
-  // textPrimary: '#ffffff',
-  // textSecondary: '#000000',
+  ensilvered: '#737373',
 }

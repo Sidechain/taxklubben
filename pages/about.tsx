@@ -1,15 +1,32 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import { EmployeeCard } from '../components/Cards/EmployeeCard/EmployeeCard'
 import { Card } from '../components/common/Card/Card'
 import { Content } from '../components/common/Content/Content'
 import { ContentHeader } from '../components/common/ContentHeader/ContentHeader'
+import { ContentWrapper } from '../components/common/ContentWrapper/ContentWrapper'
+import { Link } from '../components/common/Link/Link'
 import { PageWrapper } from '../components/common/PageWrapper/PageWrapper'
-import { Navbar } from '../components/Navbar/Navbar'
 import { Page } from '../components/Page/Page'
-import { colors } from '../styles/colors'
-import { borderRadius } from '../styles/constants'
+
+const contentful = require('contentful')
+
+const client = contentful.createClient({
+  space: '543vgtjqnozb',
+  environment: process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+})
 
 export const About = () => {
+  const [prizes, setPrizes] = useState<any[]>([])
+
+  useEffect(() => {
+    client
+      .getEntries({ content_type: 'prizes' })
+      .then((response: any) => setPrizes(response.items))
+      .catch(console.error)
+  }, [])
+
   return (
     <PageWrapper>
       <Head>
@@ -22,28 +39,26 @@ export const About = () => {
           <span>Om Upplands taxklubb</span>
           <span>
             Taxklubben för dig som är verksam i Uppland. Upplands Taxklubb är en
-            av Svenska Taxklubbens 20 lokalklubbar. Vi ordnar utställningar,
-            olika jaktprov samt kurser och utbildningar för taxar och deras
-            ägare. Du som vill aktivera din tax och uppleva glädjen i att
-            utveckla relationen och samarbetet med din hund. Välkommen att bli
-            medlem och delta i någon av alla våra aktiviteter. Medlemskap
-            anmäler du på Svenska Taxklubbens hemsida.
+            av
+            <Link
+              href="https://taxklubben.org/"
+              label=" Svenska Taxklubbens "
+            />
+            20 lokalklubbar. Vi ordnar utställningar, olika jaktprov samt kurser
+            och utbildningar för taxar och deras ägare. Du som vill aktivera din
+            tax och uppleva glädjen i att utveckla relationen och samarbetet med
+            din hund. Välkommen att bli medlem och delta i någon av alla våra
+            aktiviteter. Medlemskap anmäler du på{' '}
+            <Link
+              href="https://taxklubben.org/"
+              label=" Svenska Taxklubbens hemsida"
+            />
+            .
           </span>
         </Card>
       </Page>
       <Page>
-        <div
-          style={{
-            height: '100%',
-            backgroundColor: colors.primaryKey,
-            color: colors.primaryOn,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
-            borderRadius: borderRadius,
-            padding: '0.5rem',
-          }}
-        >
+        <ContentWrapper>
           <ContentHeader text="Styrelsen i Upplands Taxklubb" />
           <Content>
             <EmployeeCard
@@ -174,7 +189,7 @@ export const About = () => {
             <EmployeeCard name="Torgny Edin" phone="018-36 60 97" />
             <EmployeeCard name="Kim Gjerdingen" phone="0768 00 61 51" />
           </Content>
-        </div>
+        </ContentWrapper>
       </Page>
     </PageWrapper>
   )

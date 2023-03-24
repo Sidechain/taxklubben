@@ -5,6 +5,6 @@ type Props = {
   children: ReactNode
 }
 
-export const PageWrapper: FC<Props> = ({ children }) => {
+export const ContentWrapper: FC<Props> = ({ children }) => {
   return <S.Container>{children}</S.Container>
 }
